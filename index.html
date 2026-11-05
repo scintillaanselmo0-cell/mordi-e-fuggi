@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mordi e Fuggi — Pizzeria, Hamburgheria & Ristorante a Teverola (CE)</title>
+<meta name="description" content="Mordi e Fuggi a Teverola (CE): pizzeria napoletana, hamburger di marchigiana, pollo allo spiedo e primi espressi. Sala, asporto e prenotazioni. Aperto 7 giorni su 7, pranzo e cena.">
+<meta name="theme-color" content="#701F30">
+<link rel="canonical" href="https://scintillaanselmo0-cell.github.io/mordi-e-fuggi/">
+
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Mordi e Fuggi — Pizzeria & Ristorante · Teverola">
+<meta property="og:description" content="Pizza napoletana, burger di marchigiana e pollo allo spiedo. Aperto tutti i giorni a pranzo e cena, a due passi dall’ASI di Teverola.">
+<meta property="og:locale" content="it_IT">
+<meta property="og:url" content="https://scintillaanselmo0-cell.github.io/mordi-e-fuggi/">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon -->
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<!-- Font: Anton (display), Fraunces (serif), Inter (UI) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================= NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#home" class="nav-brand" aria-label="Mordi e Fuggi — home">
+      <img src="assets/img/logo.webp" alt="Logo Mordi e Fuggi" width="40" height="40">
+      <span>Mordi<span style="color:var(--gold)">&nbsp;e&nbsp;</span>Fuggi</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigazione principale">
+      <a href="#menu">Menu</a>
+      <a href="#specialita">Specialità</a>
+      <a href="#chisiamo">Chi siamo</a>
+      <a href="#prenota">Prenota</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <div class="nav-right">
+      <span id="open-badge-nav" class="open-badge" aria-live="polite"><span class="dot"></span><span class="lbl">…</span></span>
+      <a href="#prenota" class="btn btn-wine nav-cta">Prenota</a>
+      <button class="burger" id="burger" aria-label="Apri menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu mobile">
+    <a href="#menu">Menu</a>
+    <a href="#specialita">Specialità</a>
+    <a href="#chisiamo">Chi siamo</a>
+    <a href="#prenota">Prenota</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============================================================ HERO -->
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <img src="assets/img/logo.webp" alt="" class="hero-logo" width="96" height="96" aria-hidden="true">
+      <p class="cuisine" id="hero-cuisine">Pizzeria · Hamburgheria · Ristorante</p>
+      <h1>Mordi <span class="amp">e</span> Fuggi</h1>
+      <p class="hook" id="hero-hook">Pizza napoletana, burger di marchigiana e pollo allo spiedo. A due passi dall’ASI di Teverola, aperto tutti i giorni a pranzo e a cena.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-primary btn-lg">Vedi il menu</a>
+        <a href="#" id="hero-call" class="btn btn-ghost-light btn-lg">Chiama ora</a>
+      </div>
+      <div class="hero-meta">
+        <span id="open-badge-hero" class="open-badge"><span class="dot"></span><span class="lbl">…</span></span>
+        <span class="mi" id="hero-loc">📍 Teverola (CE)</span>
+      </div>
+    </div>
+  </div>
+  <!-- Galleria scorrevole: sotto l'hero, a tutta larghezza -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+</section>
+
+<!-- =================================================== COSA FACCIAMO -->
+<section class="cucina" aria-label="Cosa facciamo">
+  <div class="wrap">
+    <div class="cucina-list" id="cucina-list"></div>
+  </div>
+</section>
+
+<!-- ======================================================= SPECIALITÀ -->
+<section class="featured" id="specialita">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Le nostre specialità</p>
+      <h2 class="sec-title">Quello che<br>ci chiedono</h2>
+      <p>I piatti che i clienti nominano di più nelle recensioni. Fatti al momento, con prodotti genuini.</p>
+    </div>
+    <div class="feat-grid" id="feat-grid"></div>
+  </div>
+</section>
+
+<!-- ============================================================= MENU -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Il menu</p>
+      <h2 class="sec-title">Mangia bene,<br>mordi e fuggi</h2>
+      <p>Burger, panini alla piastra, pizza napoletana, primi espressi, pollo allo spiedo e friggitoria.</p>
+      <div id="price-note"></div>
+    </div>
+    <div class="menu-wrap" id="menu-wrap"></div>
+    <div class="legend" id="legend"></div>
+  </div>
+</section>
+
+<!-- ====================================================== RECENSIONI -->
+<section class="reviews" id="recensioni" aria-label="Recensioni">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" style="color:var(--gold)">Dicono di noi</p>
+      <h2 class="sec-title">Perché tornano</h2>
+    </div>
+    <div class="rev-grid" id="rev-grid"></div>
+    <p class="rev-src" id="rev-src"></p>
+  </div>
+</section>
+
+<!-- =========================================================== ABOUT -->
+<section class="about" id="chisiamo">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-txt">
+        <p class="eyebrow">Chi siamo</p>
+        <h2 class="sec-title" id="about-title" style="margin-bottom:1rem">Il sapore di casa</h2>
+        <div id="about-body"></div>
+        <p class="claim" id="about-claim">Come se stessi a casa.</p>
+      </div>
+      <div class="about-imgs" id="about-imgs"></div>
+    </div>
+    <div class="services" id="services"></div>
+  </div>
+</section>
+
+<!-- ========================================================= PRENOTA -->
+<section class="book" id="prenota">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow" style="color:var(--gold)">Prenota un tavolo</p>
+      <h2 class="sec-title">Prenota in 30 secondi</h2>
+      <p>Compila e ti apriamo WhatsApp con il messaggio già pronto: premi invio e ti confermiamo il tavolo in chat.</p>
+    </div>
+    <form class="book-card" id="book-form" novalidate>
+      <div class="field">
+        <label for="f-nome">Nome</label>
+        <input type="text" id="f-nome" name="nome" autocomplete="name" placeholder="Il tuo nome" required>
+        <span class="err">Inserisci il tuo nome.</span>
+      </div>
+      <div class="two-col">
+        <div class="field">
+          <label for="f-persone">Persone</label>
+          <input type="number" id="f-persone" name="persone" min="1" max="20" inputmode="numeric" placeholder="2" required>
+          <span class="err">Da 1 a 20 persone.</span>
+        </div>
+        <div class="field">
+          <label for="f-data">Data</label>
+          <input type="date" id="f-data" name="data" required>
+          <span class="err">Scegli una data valida (non passata).</span>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-orario">Orario</label>
+        <select id="f-orario" name="orario" required>
+          <option value="">Scegli prima la data…</option>
+        </select>
+        <span class="err">Scegli un orario negli orari di apertura.</span>
+      </div>
+      <p class="book-hint" id="book-hint">Gli orari disponibili seguono gli orari di apertura del locale.</p>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Prenota su WhatsApp</button>
+      <div class="book-ok" id="book-ok" role="status">
+        <strong>Ti stiamo aprendo WhatsApp 📲</strong>
+        Premi invio nel messaggio per confermare la prenotazione. Ti confermeremo il tavolo in chat.
+        <div style="margin-top:.6rem"><a href="#" id="book-ok-link" class="btn btn-wine">Riapri WhatsApp</a></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ======================================================== CONTATTI -->
+<section class="contact" id="contatti">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Dove siamo</p>
+      <h2 class="sec-title">Vieni a trovarci</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-block">
+        <h3>Contatti & orari</h3>
+        <ul class="cinfo" id="cinfo"></ul>
+        <table class="hours-table" id="hours-table" aria-label="Orari di apertura"></table>
+        <div class="delivery-row" id="delivery-row"></div>
+        <div class="socials" id="socials"></div>
+      </div>
+      <div class="contact-block">
+        <h3>Mappa</h3>
+        <iframe class="map-frame" id="map" title="Mappa Mordi e Fuggi Teverola" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div style="margin-top:var(--s-4)"><a href="#" id="directions" class="btn btn-ghost btn-block" target="_blank" rel="noopener">Apri in Google Maps · Indicazioni</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========================================================== FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <img src="assets/img/logo.webp" alt="Mordi e Fuggi" width="56" height="56">
+    <div><strong>Mordi e Fuggi</strong> — Pizzeria & Ristorante</div>
+    <div id="foot-addr" style="margin-top:.3rem"></div>
+    <div style="margin-top:.4rem"><a id="foot-phone" href="#">Chiama</a> · <a id="foot-ig" href="#" target="_blank" rel="noopener">Instagram</a> · <a id="foot-fb" href="#" target="_blank" rel="noopener">Facebook</a></div>
+    <div class="fnote">© <span id="year"></span> Mordi e Fuggi · Teverola (CE) · P.IVA da inserire</div>
+  </div>
+</footer>
+
+<!-- ================================================ STICKY BAR MOBILE -->
+<div class="sticky-bar" aria-label="Azioni rapide">
+  <a href="#" id="sticky-call" class="btn btn-ghost-light">📞 Chiama</a>
+  <a href="#prenota" class="btn btn-primary">Prenota</a>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

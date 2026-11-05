@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://scintillaanselmo0-cell.github.io/mordi-e-fuggi/sitemap.xml
