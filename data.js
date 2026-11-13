@@ -25,10 +25,11 @@ window.MORDI = {
 
   /* ------------------------------------------------------------- CONTATTI */
   contact: {
-    phone:        "+39 081 504 7065",
-    phoneHref:    "+390815047065",
-    // ⚠️ VERIFICARE: inserisci il CELLULARE con WhatsApp attivo (senza + né spazi).
-    whatsapp:     "390815047065",
+    phone:        "+39 378 420 8243",
+    phoneHref:    "+393784208243",
+    phoneNote:    "solo chiamate",
+    whatsapp:     "",                 // nessun WhatsApp: il numero è solo per chiamate
+    email:        "restaurantdatommaso@gmail.com",
     addressLine:  "SS7bis Km 11,00 · Zona ASI",
     city:         "81030 Teverola (CE) — Campania",
     mapsQuery:    "Mordi e Fuggi Pizzeria Teverola",

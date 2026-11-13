@@ -166,7 +166,8 @@ var ICON={
   card:'<path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm0 4v2h18V9H3zm0 4v4h8v-4H3z" fill="currentColor"/>',
   pet:'<path d="M5.5 11a2 2 0 110-4 2 2 0 010 4zm13 0a2 2 0 110-4 2 2 0 010 4zM9 8a2 2 0 110-4 2 2 0 010 4zm6 0a2 2 0 110-4 2 2 0 010 4zm-3 3c2.5 0 5 2.5 5 5a3 3 0 01-3 3 6 6 0 01-2-.4 6 6 0 01-2 .4 3 3 0 01-3-3c0-2.5 2.5-5 5-5z" fill="currentColor"/>',
   fb:'<path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 011-1z" fill="currentColor"/>',
-  ig:'<path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A4.5 4.5 0 1112 16.5 4.5 4.5 0 0112 7.5zm0 2A2.5 2.5 0 1012 14.5 2.5 2.5 0 0012 9.5zM17.5 6a1 1 0 110 2 1 1 0 010-2z" fill="currentColor"/>'
+  ig:'<path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3.5A4.5 4.5 0 1112 16.5 4.5 4.5 0 0112 7.5zm0 2A2.5 2.5 0 1012 14.5 2.5 2.5 0 0012 9.5zM17.5 6a1 1 0 110 2 1 1 0 010-2z" fill="currentColor"/>',
+  mail:'<path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm1.4 2L12 12.3 19.6 7H4.4zM20 8.3l-8 5.5-8-5.5V17h16V8.3z" fill="currentColor"/>'
 };
 function svg(name){ return '<svg viewBox="0 0 24 24" aria-hidden="true">'+(ICON[name]||"")+'</svg>'; }
 
@@ -180,7 +181,8 @@ function renderContact(){
   var c=D.contact, ul=$("#cinfo");
   ul.innerHTML=
     '<li>'+svg("pin")+'<span>'+c.addressLine+'<br>'+c.city+'</span></li>'+
-    '<li>'+svg("phone")+'<a href="tel:'+c.phoneHref+'">'+c.phone+'</a></li>'+
+    '<li>'+svg("phone")+'<a href="tel:'+c.phoneHref+'">'+c.phone+'</a>'+(c.phoneNote?' <span class="cinfo-note">· '+c.phoneNote+'</span>':'')+'</li>'+
+    (c.email?'<li>'+svg("mail")+'<a href="mailto:'+c.email+'">'+c.email+'</a></li>':'')+
     (waDigits()?'<li>'+svg("wa")+'<a href="'+waLink("Ciao Mordi e Fuggi! Avrei bisogno di assistenza.")+'" target="_blank" rel="noopener">WhatsApp (solo assistenza)</a></li>':'')+
     '<li>'+svg("clock")+'<span>'+D.hoursNote+'</span></li>';
 

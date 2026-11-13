@@ -261,6 +261,7 @@ section{scroll-margin-top:66px}
 .cinfo li{display:flex; gap:.7rem; align-items:flex-start; padding:.55rem 0; border-bottom:1px solid var(--line)}
 .cinfo svg{width:21px; height:21px; color:var(--paprika); flex:none; margin-top:2px}
 .cinfo a{font-weight:600}
+.cinfo-note{color:var(--ink-soft); font-weight:400; font-size:.85rem}
 .hours-table{width:100%; border-collapse:collapse; font-size:.95rem}
 .hours-table td{padding:.5rem 0; border-bottom:1px solid var(--line); vertical-align:top}
 .hours-table td:last-child{text-align:right; font-variant-numeric:tabular-nums; color:var(--ink-soft)}
