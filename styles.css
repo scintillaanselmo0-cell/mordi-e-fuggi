@@ -116,7 +116,7 @@ section{scroll-margin-top:66px}
     linear-gradient(180deg, rgba(40,10,18,.30), rgba(60,16,28,.82) 72%, var(--wine-deep)),
     url("assets/img/hero-bg.webp") center/cover no-repeat;
   filter:saturate(1.05)}
-.hero-inner{position:relative; padding:var(--s-8) 0 var(--s-7);
+.hero-inner{position:relative; padding-top:var(--s-8); padding-bottom:var(--s-7);
   display:flex; flex-direction:column; align-items:flex-start; gap:var(--s-4)}
 .hero-logo{width:78px; height:78px; border-radius:50%; box-shadow:var(--shadow);
   border:3px solid rgba(255,255,255,.85)}
@@ -338,7 +338,7 @@ section{scroll-margin-top:66px}
   .burger{display:none}
   .mobile-menu{display:none !important}
 
-  .hero-inner{padding:var(--s-9) 0 var(--s-7); display:block; max-width:780px}
+  .hero-inner{padding-top:var(--s-9); padding-bottom:var(--s-7); display:block; max-width:780px}
   .hero-logo{width:96px; height:96px}
   .hero .hook{font-size:1.35rem}
   .hero-cta{width:auto}
