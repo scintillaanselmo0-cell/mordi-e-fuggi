@@ -181,7 +181,7 @@ function renderContact(){
   ul.innerHTML=
     '<li>'+svg("pin")+'<span>'+c.addressLine+'<br>'+c.city+'</span></li>'+
     '<li>'+svg("phone")+'<a href="tel:'+c.phoneHref+'">'+c.phone+'</a></li>'+
-    (waDigits()?'<li>'+svg("wa")+'<a href="'+waLink("Ciao Mordi e Fuggi! Avrei una domanda.")+'" target="_blank" rel="noopener">Scrivici su WhatsApp</a></li>':'')+
+    (waDigits()?'<li>'+svg("wa")+'<a href="'+waLink("Ciao Mordi e Fuggi! Avrei bisogno di assistenza.")+'" target="_blank" rel="noopener">WhatsApp (solo assistenza)</a></li>':'')+
     '<li>'+svg("clock")+'<span>'+D.hoursNote+'</span></li>';
 
   // orari tabella
