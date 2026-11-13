@@ -167,7 +167,14 @@
       </div>
       <div class="contact-block">
         <h3>Mappa</h3>
-        <iframe class="map-frame" id="map" title="Mappa Mordi e Fuggi Teverola" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="map-box">
+          <div class="map-consent" id="map-consent">
+            <p>Per mostrarti la mappa carichiamo <strong>Google Maps</strong>, che può installare cookie di terze parti.</p>
+            <button type="button" id="map-load" class="btn btn-wine">Carica la mappa</button>
+            <a href="privacy.html" class="map-policy">Cookie policy</a>
+          </div>
+          <iframe class="map-frame" id="map" title="Mappa Mordi e Fuggi Teverola" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen hidden></iframe>
+        </div>
         <div style="margin-top:var(--s-4)"><a href="#" id="directions" class="btn btn-ghost btn-block" target="_blank" rel="noopener">Apri in Google Maps · Indicazioni</a></div>
       </div>
     </div>
@@ -183,7 +190,9 @@
     <div><strong>Mordi e Fuggi</strong> — Pizzeria & Ristorante</div>
     <div id="foot-addr" style="margin-top:.3rem"></div>
     <div style="margin-top:.4rem"><a id="foot-phone" href="#">Chiama</a> · <a id="foot-ig" href="#" target="_blank" rel="noopener">Instagram</a> · <a id="foot-fb" href="#" target="_blank" rel="noopener">Facebook</a></div>
-    <div class="fnote">© <span id="year"></span> Mordi e Fuggi · Teverola (CE) · P.IVA da inserire</div>
+    <div class="foot-links"><a href="privacy.html">Privacy &amp; Cookie Policy</a></div>
+    <div class="foot-legal" id="foot-legal"></div>
+    <div class="fnote">© <span id="year"></span> Restaurant Antica Appia S.r.l. · Tutti i diritti riservati</div>
   </div>
 </footer>
 
@@ -191,6 +200,16 @@
 <div class="sticky-bar" aria-label="Azioni rapide">
   <a href="#" id="sticky-call" class="btn btn-primary">📞 Chiama</a>
   <a href="#menu" class="btn btn-ghost-light">Menu</a>
+</div>
+
+<!-- =================================================== COOKIE BANNER -->
+<div class="cookie-bar" id="cookie-bar" role="dialog" aria-label="Informativa cookie" hidden>
+  <p>Usiamo cookie tecnici necessari al funzionamento del sito. Con il tuo consenso carichiamo anche Google Maps (cookie di terze parti).
+    <a href="privacy.html">Leggi la Cookie Policy</a>.</p>
+  <div class="cookie-actions">
+    <button type="button" id="cookie-necessary" class="btn btn-ghost">Solo necessari</button>
+    <button type="button" id="cookie-accept" class="btn btn-primary">Accetta tutto</button>
+  </div>
 </div>
 
 <script src="data.js"></script>

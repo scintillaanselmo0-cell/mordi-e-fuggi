@@ -280,6 +280,38 @@ section{scroll-margin-top:66px}
 .footer img{width:56px; height:56px; border-radius:50%; margin:0 auto var(--s-3); border:2px solid var(--gold)}
 .footer a{color:var(--gold-soft); font-weight:600}
 .footer .fnote{margin-top:var(--s-3); opacity:.7; font-size:.78rem}
+.foot-links{margin-top:var(--s-3)}
+.foot-links a{text-decoration:underline}
+.foot-legal{margin:var(--s-4) auto 0; max-width:640px; font-size:.75rem; line-height:1.6;
+  opacity:.72; border-top:1px solid rgba(231,211,169,.2); padding-top:var(--s-4)}
+.foot-legal a{color:var(--gold-soft)}
+
+/* ------------------------------------------------------- MAPPA + CONSENSO */
+.map-box{position:relative}
+.map-consent{display:flex; flex-direction:column; align-items:flex-start; gap:var(--s-3);
+  background:var(--cream-2); border:1px dashed var(--gold); border-radius:var(--radius);
+  padding:var(--s-5); min-height:300px; justify-content:center}
+.map-consent p{margin:0; font-size:.9rem; color:var(--ink-soft)}
+.map-consent .map-policy{font-size:.82rem; text-decoration:underline; color:var(--wine)}
+
+/* ------------------------------------------------------------ COOKIE BAR */
+.cookie-bar{position:fixed; left:0; right:0; bottom:0; z-index:90;
+  background:var(--ink); color:#f3e7dd; padding:var(--s-4) var(--s-4) calc(var(--s-4) + env(safe-area-inset-bottom));
+  box-shadow:0 -8px 24px rgba(0,0,0,.28); display:flex; flex-direction:column; gap:var(--s-3)}
+.cookie-bar[hidden]{display:none}
+.cookie-bar p{margin:0; font-size:.86rem; line-height:1.5}
+.cookie-bar a{color:var(--gold-soft); text-decoration:underline}
+.cookie-actions{display:flex; gap:var(--s-3)}
+.cookie-actions .btn{flex:1; min-height:46px}
+.cookie-actions .btn-ghost{color:var(--cream); border-color:rgba(255,255,255,.5)}
+.cookie-actions .btn-ghost:hover{background:var(--cream); color:var(--ink)}
+@media (min-width:820px){
+  .cookie-bar{flex-direction:row; align-items:center; justify-content:center; gap:var(--s-5);
+    padding:var(--s-4) var(--s-5)}
+  .cookie-bar p{max-width:60ch}
+  .cookie-actions{flex:0 0 auto}
+  .cookie-actions .btn{flex:0 0 auto}
+}
 
 /* --------------------------------------------------- STICKY BAR MOBILE */
 .sticky-bar{position:fixed; left:0; right:0; bottom:0; z-index:70;

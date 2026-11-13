@@ -193,8 +193,8 @@ function renderContact(){
   }
   t.innerHTML=rows;
 
-  // mappa
-  $("#map").src="https://maps.google.com/maps?q="+encodeURIComponent(c.mapsQuery)+"&z=15&output=embed";
+  // mappa: l'URL è pronto ma viene caricato SOLO dopo il consenso ai cookie
+  MAP_URL="https://maps.google.com/maps?q="+encodeURIComponent(c.mapsQuery)+"&z=15&output=embed";
   $("#directions").href="https://www.google.com/maps/dir/?api=1&destination="+encodeURIComponent(c.mapsQuery);
 
   // delivery
@@ -244,6 +244,41 @@ function injectSchema(){
   s.textContent=JSON.stringify(data); document.head.appendChild(s);
 }
 
+/* ----------------------------------------------------------- legale */
+function renderLegal(){
+  var L=D.legal; if(!L) return;
+  var box=$("#foot-legal"); if(!box) return;
+  box.innerHTML=
+    L.brandOwnerNote+"<br>"+
+    L.company+" — "+L.form+"<br>"+
+    "Sede legale: "+L.regOffice+"<br>"+
+    "P.IVA / C.F. "+L.vat+" · REA "+L.rea+" ("+L.reaOffice+")<br>"+
+    "Capitale sociale: "+L.capital+"<br>"+
+    "PEC: <a href=\"mailto:"+L.pec+"\">"+L.pec+"</a>";
+}
+
+/* ---------------------------------------------- mappa + consenso cookie */
+var MAP_URL="";
+function loadMap(){
+  var f=$("#map"), cns=$("#map-consent");
+  if(!f || f.getAttribute("src")) return;
+  f.setAttribute("src", MAP_URL); f.hidden=false;
+  if(cns) cns.style.display="none";
+}
+function getConsent(){ try{ return localStorage.getItem("mf_consent"); }catch(e){ return null; } }
+function setConsent(v){ try{ localStorage.setItem("mf_consent", v); }catch(e){} }
+function setupConsent(){
+  var bar=$("#cookie-bar"), ml=$("#map-load"), choice=getConsent();
+  if(ml) ml.addEventListener("click", loadMap); // carica la mappa su richiesta
+  if(choice==="all"){ loadMap(); }
+  else if(!choice && bar){ bar.hidden=false; }
+  if(bar){
+    var a=$("#cookie-accept"), n=$("#cookie-necessary");
+    if(a) a.addEventListener("click",function(){ setConsent("all"); bar.hidden=true; loadMap(); });
+    if(n) n.addEventListener("click",function(){ setConsent("necessary"); bar.hidden=true; });
+  }
+}
+
 /* --------------------------------------------------------------- nav */
 function setupNav(){
   var b=$("#burger"), m=$("#mobile-menu");
@@ -260,7 +295,7 @@ function setupNav(){
 /* --------------------------------------------------------------- init */
 renderHero(); renderCucina(); renderFeatured(); renderGallery(); renderPriceNote();
 renderMenu(); renderLegend(); renderReviews(); renderAbout();
-renderServices(); renderContact(); wireLinks();
-setupNav(); injectSchema();
+renderServices(); renderContact(); wireLinks(); renderLegal();
+setupNav(); injectSchema(); setupConsent();
 renderOpen(); setInterval(renderOpen, 60000); // aggiorna ogni minuto
 })();

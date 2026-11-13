@@ -257,6 +257,22 @@ window.MORDI = {
     images:["assets/img/sala-1.webp","assets/img/banco-self.webp","assets/img/banco-friggi.webp"]
   },
 
+  /* --------------------------------------------------------- DATI LEGALI */
+  legal: {
+    brandOwnerNote: "“Mordi e Fuggi” è un marchio di Restaurant Antica Appia S.r.l.",
+    company:     "Restaurant Antica Appia S.r.l.",
+    companyFull: "RESTAURANT ANTICA APPIA SOCIETÀ A RESPONSABILITÀ LIMITATA",
+    form:        "Società a responsabilità limitata (S.r.l.)",
+    vat:         "04804120618",           // Partita IVA e Codice Fiscale
+    rea:         "CE-356606",
+    reaOffice:   "Camera di Commercio di Caserta",
+    capital:     "€ 1.000,00 interamente versato",
+    regOffice:   "Via Carlo Casalegno 7, 81031 Aversa (CE)",
+    pec:         "restaurantanticaappiasrl@pec.it",
+    rep:         "Francesco Oliviero — Amministratore Unico",
+    policyUpdated: "13 novembre 2026"
+  },
+
   /* --------------------------------------------------------------- SEO */
   seo: {
     url: "https://scintillaanselmo0-cell.github.io/mordi-e-fuggi/",
