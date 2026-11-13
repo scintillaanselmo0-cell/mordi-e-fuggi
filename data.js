@@ -260,9 +260,9 @@ window.MORDI = {
 
   /* --------------------------------------------------------- DATI LEGALI */
   legal: {
-    brandOwnerNote: "“Mordi e Fuggi” è un marchio di Restaurant Antica Appia S.r.l.",
-    company:     "Restaurant Antica Appia S.r.l.",
-    companyFull: "RESTAURANT ANTICA APPIA SOCIETÀ A RESPONSABILITÀ LIMITATA",
+    managedNote: "Attività gestita da Restaurant Antica Appia S.r.l.",
+    operator:    "Restaurant Antica Appia S.r.l.",
+    operatorFull:"RESTAURANT ANTICA APPIA SOCIETÀ A RESPONSABILITÀ LIMITATA",
     form:        "Società a responsabilità limitata (S.r.l.)",
     vat:         "04804120618",           // Partita IVA e Codice Fiscale
     rea:         "CE-356606",
@@ -271,6 +271,9 @@ window.MORDI = {
     regOffice:   "Via Carlo Casalegno 7, 81031 Aversa (CE)",
     pec:         "restaurantanticaappiasrl@pec.it",
     rep:         "Francesco Oliviero — Amministratore Unico",
+    // Il marchio/insegna appartiene a un'altra società, concesso in uso
+    brandOwner:  "L’Impero della Pace S.r.l.",
+    brandNote:   "Il marchio e l’insegna “Mordi e Fuggi” sono di proprietà esclusiva de L’Impero della Pace S.r.l., concessi in uso a Restaurant Antica Appia S.r.l. nell’ambito del contratto di affitto di ramo d’azienda.",
     policyUpdated: "13 novembre 2026"
   },
 

@@ -251,12 +251,13 @@ function renderLegal(){
   var L=D.legal; if(!L) return;
   var box=$("#foot-legal"); if(!box) return;
   box.innerHTML=
-    L.brandOwnerNote+"<br>"+
-    L.company+" — "+L.form+"<br>"+
+    L.managedNote+"<br>"+
+    L.operator+" — "+L.form+"<br>"+
     "Sede legale: "+L.regOffice+"<br>"+
     "P.IVA / C.F. "+L.vat+" · REA "+L.rea+" ("+L.reaOffice+")<br>"+
     "Capitale sociale: "+L.capital+"<br>"+
-    "PEC: <a href=\"mailto:"+L.pec+"\">"+L.pec+"</a>";
+    "PEC: <a href=\"mailto:"+L.pec+"\">"+L.pec+"</a>"+
+    "<span style=\"display:block;margin-top:.6rem\">"+L.brandNote+"</span>";
 }
 
 /* ---------------------------------------------- mappa + consenso cookie */
