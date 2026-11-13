@@ -210,7 +210,7 @@ function renderContact(){
 }
 function wireLinks(){
   var href="tel:"+D.contact.phoneHref;
-  ["#hero-call","#sticky-call","#foot-phone"].forEach(function(s){ var a=$(s); if(a) a.href=href; });
+  ["#hero-call","#sticky-call","#foot-phone","#nav-call"].forEach(function(s){ var a=$(s); if(a) a.href=href; });
   $("#foot-addr").textContent=D.contact.addressLine+" · "+D.contact.city;
   $("#foot-ig").href=D.contact.social.instagram;
   $("#foot-fb").href=D.contact.social.facebook;
@@ -327,6 +327,6 @@ function setupNav(){
 renderHero(); renderCucina(); renderFeatured(); renderGallery(); renderPriceNote();
 renderMenu(); renderLegend(); renderReviews(); renderAbout();
 renderServices(); renderContact(); wireLinks();
-setupBooking(); setupNav(); injectSchema();
+setupNav(); injectSchema();
 renderOpen(); setInterval(renderOpen, 60000); // aggiorna ogni minuto
 })();
