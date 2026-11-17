@@ -279,7 +279,7 @@ window.MORDI = {
 
   /* --------------------------------------------------------------- SEO */
   seo: {
-    url: "https://scintillaanselmo0-cell.github.io/mordi-e-fuggi/",
+    url: "https://mordiefuggiteverola.it/",
     metaDescription: "Mordi e Fuggi a Teverola (CE): pizzeria napoletana, carne alla brace, panini di Marchigiana, primi espressi e friggitoria. Sala, asporto e prenotazioni. Aperto 7 giorni su 7, pranzo e cena.",
     ogImage: "assets/img/og.jpg"
   }
